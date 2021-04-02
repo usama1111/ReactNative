@@ -1,8 +1,6 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import {Button, FlatList, StyleSheet, Text, View, Alert} from 'react-native';
-import InputForm from './TextInupt';
-
+import Count from './Count';
 
 export default function App() {
   
@@ -20,20 +18,11 @@ export default function App() {
   
   return (
     <View style={styles.container}>
-      <Text style={styles.heading}> <strong>Hello world </strong></Text>
-    <InputForm/>
-    <FlatList 
-    numColumns = {4}
-    data={data} 
-    renderItem={({ item }) => <Text style={styles.list}> {item.text}</Text>} 
-   
-    />
+      <Text style={styles.heading}> Counter Application </Text>
+    <Count/>
+
    
 
-   <Button
-        title="Press me"
-        onPress={() => alert('Simple Button pressed')}
-      />
     </View>
   );
 } 
@@ -41,7 +30,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'lightblue',
     alignItems: 'center',
     justifyContent: 'center',
     marginVertical: 10,
@@ -49,8 +37,10 @@ const styles = StyleSheet.create({
  },
 heading:{
 
-fontSize: 40,
-fontWeight: '700'
+fontSize: 30,
+fontWeight: '500',
+marginHorizontal: 10,
+marginVertical: 5,
 },
 
 list:{
